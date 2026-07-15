@@ -1,13 +1,16 @@
 # Superstore-Sales-Analysis
 
 Project Overview
+
 A full end-to-end business analysis of a retail superstore dataset covering 10,194 orders across four years (2023–2026). The goal was to answer six core business questions around profitability, category performance, customer revenue distribution, regional trends, and sales growth — using Excel for data cleaning, pivot table analysis, and dashboarding, and SQL for deeper querying.
 
 Tools Used
+  
   • Microsoft Excel — Data cleaning, pivot tables, dashboard
   • SQL / DB Browser for SQLite — Business queries and aggregations
 
 Dataset
+
   • Rows: 10,194
   • Columns: 21
   • Date Range: 2023–2026
@@ -25,6 +28,7 @@ Defined six core business questions to guide the analysis:
 6. How do sales change over time?
 
 Phase 2 — Data Review
+
 Reviewed dataset structure, column definitions, data types, and overall shape before cleaning. Confirmed 21 columns across 10,194 rows spanning four years of transaction data.
 
 Phase 3 — Data Cleaning
@@ -37,20 +41,25 @@ Performed the following checks and actions in Excel:
   • Quantities — Range of 1–14, no zeros or negatives. 114 rows with quantity above 10 reviewed and confirmed as legitimate bulk orders
 
 Helper Columns Added:
+
   • Ship_Date_Flag: Flags ship dates beyond 2026 as "Flagged - Likely Error"
   • Profit_Status: Labels each order as "Profitable" or "Loss"
   • Discount_Band: Buckets discount into No Discount / Low / Medium / High / Very High
   • Order_YearExtracts year from Order Date for time trend analysis
 
 Phase 4 — Analysis
+
 Built six pivot tables and charts in Excel, each answering one business question. Results compiled into a single dashboard.
 
 Phase 5 — SQL
+
 Wrote 18 SQL queries in DB Browser for SQLite against the full 10,194 row dataset covering basic selects, aggregations, filtering, grouping, and profit margin calculations.
+
 
 <img width="1203" height="587" alt="Screen Shot 2026-07-13 at 3 59 45 PM" src="https://github.com/user-attachments/assets/843332ea-daab-416b-ac3e-f64196648a21" />
 <img width="1356" height="497" alt="Screen Shot 2026-07-13 at 4 07 55 PM" src="https://github.com/user-attachments/assets/ac2bef42-6770-405b-ae6a-9fd36e1dd4ff" />
 <img width="990" height="383" alt="Screen Shot 2026-07-13 at 4 12 30 PM" src="https://github.com/user-attachments/assets/374c98e0-ef18-4ac9-bd22-7e5b6dc00811" />
+
 
 Business Questions & Findings
 1. What Are Total Profits?
@@ -67,7 +76,9 @@ The West leads in both sales ($739K) and profit ($110K), followed closely by the
 Sales and profit grew consistently from 2023–2026, with revenue up 51% ($494K → $745K) and profit up 85% ($51K → $95K). A brief 2024 sales dip was offset by improved margins, suggesting stronger discount discipline that year. Profit growing faster than sales indicates improving efficiency, though discounting remains an ongoing risk to sustaining this trend.
 
 Key Takeaway
+
 Discount rate is the single strongest predictor of unprofitability across this dataset. Heavy discounting is driving losses across all three categories and multiple regions. A targeted pricing strategy review — particularly for Furniture, Binders, and Machines — could significantly improve net profit without requiring any increase in sales volume.
 
 SQL Queries
+
 See superstore_queries.sql for all 18 queries covering aggregations, filtering, profit margin calculations, and time trend analysis.
