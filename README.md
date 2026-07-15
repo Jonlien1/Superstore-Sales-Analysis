@@ -2,18 +2,22 @@
 
 Project Overview
 
-A full end-to-end business analysis of a retail superstore dataset covering 10,194 orders across four years (2023–2026). The goal was to answer six core business questions around profitability, category performance, customer revenue distribution, regional trends, and sales growth — using Excel for data cleaning, pivot table analysis, and dashboarding, and SQL for deeper querying.
+• A full end-to-end business analysis of a retail superstore dataset covering 10,194 orders across four years (2023–2026). The goal was to answer six core business questions around profitability, category performance, customer revenue distribution, regional trends, and sales growth — using Excel for data cleaning, pivot table analysis, and dashboarding, and SQL for deeper querying.
 
 Tools Used
   
   • Microsoft Excel — Data cleaning, pivot tables, dashboard
+  
   • SQL / DB Browser for SQLite — Business queries and aggregations
 
 Dataset
 
   • Rows: 10,194
+  
   • Columns: 21
+  
   • Date Range: 2023–2026
+  
   • Fields Include: Order ID, Order Date, Ship Date, Customer Name, Segment, Region, Category, Sub-Category, Product Name, Sales, Quantity,     discount, Profit
 
 Project Phases
@@ -29,7 +33,7 @@ Defined six core business questions to guide the analysis:
 
 Phase 2 — Data Review
 
-Reviewed dataset structure, column definitions, data types, and overall shape before cleaning. Confirmed 21 columns across 10,194 rows spanning four years of transaction data.
+• Reviewed dataset structure, column definitions, data types, and overall shape before cleaning. Confirmed 21 columns across 10,194 rows spanning four years of transaction data.
 
 Phase 3 — Data Cleaning
 
@@ -43,17 +47,20 @@ Performed the following checks and actions in Excel:
 Helper Columns Added:
 
   • Ship_Date_Flag: Flags ship dates beyond 2026 as "Flagged - Likely Error"
+  
   • Profit_Status: Labels each order as "Profitable" or "Loss"
+  
   • Discount_Band: Buckets discount into No Discount / Low / Medium / High / Very High
+  
   • Order_YearExtracts year from Order Date for time trend analysis
 
 Phase 4 — Analysis
 
-Built six pivot tables and charts in Excel, each answering one business question. Results compiled into a single dashboard.
+• Built six pivot tables and charts in Excel, each answering one business question. Results compiled into a single dashboard.
 
 Phase 5 — SQL
 
-Wrote 18 SQL queries in DB Browser for SQLite against the full 10,194 row dataset covering basic selects, aggregations, filtering, grouping, and profit margin calculations.
+• Wrote 18 SQL queries in DB Browser for SQLite against the full 10,194 row dataset covering basic selects, aggregations, filtering, grouping, and profit margin calculations.
 
 
 <img width="1203" height="587" alt="Screen Shot 2026-07-13 at 3 59 45 PM" src="https://github.com/user-attachments/assets/843332ea-daab-416b-ac3e-f64196648a21" />
@@ -77,8 +84,8 @@ Sales and profit grew consistently from 2023–2026, with revenue up 51% ($494K 
 
 Key Takeaway
 
-Discount rate is the single strongest predictor of unprofitability across this dataset. Heavy discounting is driving losses across all three categories and multiple regions. A targeted pricing strategy review — particularly for Furniture, Binders, and Machines — could significantly improve net profit without requiring any increase in sales volume.
+• Discount rate is the single strongest predictor of unprofitability across this dataset. Heavy discounting is driving losses across all three categories and multiple regions. A targeted pricing strategy review — particularly for Furniture, Binders, and Machines — could significantly improve net profit without requiring any increase in sales volume.
 
 SQL Queries
 
-See superstore_queries.sql for all 18 queries covering aggregations, filtering, profit margin calculations, and time trend analysis.
+• See superstore_queries.sql for all 18 queries covering aggregations, filtering, profit margin calculations, and time trend analysis.
