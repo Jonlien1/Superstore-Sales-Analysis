@@ -114,12 +114,13 @@ See [superstore_queries.sql](superstore_queries.sql) for all 18 queries covering
 
 ## Repository Structure
 
+```
 superstore-sales-analysis/
 │
 ├── README.md
 ├── dashboard.png
 ├── Superstore_Sales_Analysis.xlsx
 └── superstore_queries.sql
-
+```
 
 
