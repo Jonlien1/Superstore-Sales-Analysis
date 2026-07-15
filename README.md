@@ -5,22 +5,26 @@ Project Overview
 • A full end-to-end business analysis of a retail superstore dataset covering 10,194 orders across four years (2023–2026). The goal was to answer six core business questions around profitability, category performance, customer revenue distribution, regional trends, and sales growth — using Excel for data cleaning, pivot table analysis, and dashboarding, and SQL for deeper querying.
 
 
+
 Tools Used
   
-  • Microsoft Excel — Data cleaning, pivot tables, dashboard
+    • Microsoft Excel — Data cleaning, pivot tables, dashboard
   
-  • SQL / DB Browser for SQLite — Business queries and aggregations
+    • SQL / DB Browser for SQLite — Business queries and aggregations
+
 
 
 Dataset
 
-  • Rows: 10,194
+    • Rows: 10,194
   
-  • Columns: 21
+    • Columns: 21
+    
+    • Date Range: 2023–2026
   
-  • Date Range: 2023–2026
-  
-  • Fields Include: Order ID, Order Date, Ship Date, Customer Name, Segment, Region, Category, Sub-Category, Product Name, Sales, Quantity,     discount, Profit
+    • Fields Include: Order ID, Order Date, Ship Date, Customer Name, Segment, Region, Category, Sub-Category, Product Name, Sales,         
+      Quantity,     discount, Profit
+
 
 
 Project Phases
@@ -35,34 +39,38 @@ Defined six core business questions to guide the analysis:
 6. How do sales change over time?
 
 
+
 Phase 2 — Data Review
 
 • Reviewed dataset structure, column definitions, data types, and overall shape before cleaning. Confirmed 21 columns across 10,194 rows spanning four years of transaction data.
 
 
+
 Phase 3 — Data Cleaning
 
 Performed the following checks and actions in Excel:
-  • Blank Values — No nulls found across all 21 columns
+    • Blank Values — No nulls found across all 21 columns
   
-  • Duplicate Rows — No duplicates found
+    • Duplicate Rows — No duplicates found
   
-  • Future Ship Dates — Identified 46 rows with 2027 ship dates against 2023 order dates. Flagged as likely data entry errors. In a real        business setting these would be escalated to the data owner before correction
+    • Future Ship Dates — Identified 46 rows with 2027 ship dates against 2023 order dates. Flagged as likely data entry errors. In a real        business setting these would be escalated to the data owner before correction
   
-  • Negative Profits — 1,901 rows with negative profit identified. Retained as valid business outcomes driven by heavy discounting
+    • Negative Profits — 1,901 rows with negative profit identified. Retained as valid business outcomes driven by heavy discounting
   
-  • Quantities — Range of 1–14, no zeros or negatives. 114 rows with quantity above 10 reviewed and confirmed as legitimate bulk orders
+    • Quantities — Range of 1–14, no zeros or negatives. 114 rows with quantity above 10 reviewed and confirmed as legitimate bulk orders
+
 
 
 Helper Columns Added:
 
-  • Ship_Date_Flag: Flags ship dates beyond 2026 as "Flagged - Likely Error"
+    • Ship_Date_Flag: Flags ship dates beyond 2026 as "Flagged - Likely Error"
   
-  • Profit_Status: Labels each order as "Profitable" or "Loss"
+    • Profit_Status: Labels each order as "Profitable" or "Loss"
   
-  • Discount_Band: Buckets discount into No Discount / Low / Medium / High / Very High
+    • Discount_Band: Buckets discount into No Discount / Low / Medium / High / Very High
   
-  • Order_YearExtracts year from Order Date for time trend analysis
+    • Order_YearExtracts year from Order Date for time trend analysis
+
 
 
 Phase 4 — Analysis
@@ -70,14 +78,17 @@ Phase 4 — Analysis
 • Built six pivot tables and charts in Excel, each answering one business question. Results compiled into a single dashboard.
 
 
+
 Phase 5 — SQL
 
 • Wrote 18 SQL queries in DB Browser for SQLite against the full 10,194 row dataset covering basic selects, aggregations, filtering, grouping, and profit margin calculations.
 
 
+
 <img width="1203" height="587" alt="Screen Shot 2026-07-13 at 3 59 45 PM" src="https://github.com/user-attachments/assets/843332ea-daab-416b-ac3e-f64196648a21" />
 <img width="1356" height="497" alt="Screen Shot 2026-07-13 at 4 07 55 PM" src="https://github.com/user-attachments/assets/ac2bef42-6770-405b-ae6a-9fd36e1dd4ff" />
 <img width="990" height="383" alt="Screen Shot 2026-07-13 at 4 12 30 PM" src="https://github.com/user-attachments/assets/374c98e0-ef18-4ac9-bd22-7e5b6dc00811" />
+
 
 
 Business Questions & Findings
