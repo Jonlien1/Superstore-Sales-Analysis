@@ -118,7 +118,9 @@ See [superstore_queries.sql](superstore_queries.sql) for all 18 queries covering
 superstore-sales-analysis/
 │
 ├── README.md
-├── dashboard.png
+├── dashboard_1.png
+├── dashboard_2.png
+├── dashboard_3.png
 ├── Superstore_Sales_Analysis.xlsx
 └── superstore_queries.sql
 ```
