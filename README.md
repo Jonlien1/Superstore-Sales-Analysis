@@ -80,7 +80,7 @@ Net profit of $292K across 10,194 orders. However, 1,901 orders (18.6%) were unp
 
 ### 2. Which Categories Generate the Most Sales?
 
-Technology leads in both sales ($839K) and profit ($146K), making it the strongest overall performer. Office Supplies ranks second in sales ($731K) but delivers the highest profit efficiency ($126K), suggesting healthier margins and less discounting. Furniture generates $754K in sales but only $19K in profit — the lowest margin by far — driven by net losses in Tables and Bookcases sub-categories. High sales volume alone does not guarantee profitability.
+Technology leads in both sales ($839K) and profit ($146K), making it the strongest overall performer. Office Supplies ranks third in sales ($731K) but delivers the highest profit efficiency ($126K), suggesting healthier margins and less discounting. Furniture generates $754K in sales but only $19K in profit — the lowest margin by far — driven by net losses in Tables and Bookcases sub-categories. High sales volume alone does not guarantee profitability.
 
 ### 3. Which Products Lose Money?
 
